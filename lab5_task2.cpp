@@ -12,16 +12,22 @@ using namespace std;
     }
     bool moveMin(vector<int> &in,vector<int> &out){
         
-        for(int i=0;i<in.size();i++){
-            for(int j=in.size()-1;j>0;j--){
+        for(int i=in.size()-1;i>0;i--){
+            if(in[i]<in[i-1]){
+               swap(i,in);
+            }
+            else{
+            break;
+
+            
          
-                if(in[j]<in[j-1]){
-                    swap(j,in);
+                
+                   
                     
                 }
         
             }
-        }
+        
        
         return 0;
     }
